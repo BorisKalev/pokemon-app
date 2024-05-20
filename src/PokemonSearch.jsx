@@ -67,6 +67,7 @@ function PokemonSearch() {
 
   const fetchPokemonById = async (id) => {
     try {
+      setSearchInput("");
       const specificPokemonUrl = `${listOfPokemons}/${id}`;
       const res = await fetch(specificPokemonUrl);
       const data2 = await res.json();
